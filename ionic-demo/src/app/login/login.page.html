@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-input [(ngModel)]="user.email" placeholder="enter username"></ion-input>
+      </ion-item>
+      <div class="addgap"></div>
+      <ion-item>
+        <ion-input [(ngModel)]="user.password" placeholder="enter password" type="password"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="login()" fill="outline" slot="end">Login</ion-button>
+      <ion-button expand="block" color="secondary" (click)="registerNewUser()" fill="outline" slot="end">Register</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
