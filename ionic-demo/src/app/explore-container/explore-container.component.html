@@ -1,6 +1,15 @@
-<!-- <div id="container">
-  <strong>{{ name }}</strong>
-  <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-</div> -->
+<ion-content padding>
+  <ion-slides  [options]="slideOpts" (ionSlideDidChange)="slideChanged()">
+    <ion-slide  *ngFor="let item of slidearr">
+      <app-news (click)="detectChangedSelection(item)" [cardSubTitle]="item.subtitle" [cardTitle]="item.title" [contentText]="item.info"
+        [imageLocation]="item.thumbnail" [imageAltText]="item.altText"></app-news>
+    </ion-slide>
 
-<app-news></app-news>
+  </ion-slides>
+
+  <!-- This is just for testing the addition of new data.. To be reformatted -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+    <ion-fab-button (click)="addNews()"></ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab>
+</ion-content>

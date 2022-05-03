@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>news-articles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="news">
+    <ion-item>
+      <ion-label position="stacked">title</ion-label>
+      <ion-input [(ngModel)]="news.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">subtitle</ion-label>
+      <ion-input [(ngModel)]="news.subtitle"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">info</ion-label>
+      <ion-input [(ngModel)]="news.info"></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="success" (click)="updateNews()">
+      <ion-icon name="save" slot="start">Update</ion-icon>
+    </ion-button>
+    <ion-button expand="block" color="success" (click)="deleteNews()">
+      <ion-icon name="trash" slot="start">Delete</ion-icon>
+    </ion-button>
+  </div>
+</ion-content>
