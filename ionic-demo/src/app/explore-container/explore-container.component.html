@@ -6,7 +6,44 @@
     </ion-slide>
 
   </ion-slides>
-
+  <ion-grid class="ion-align-items-center">
+    <ion-row>
+      <ion-col>
+        <ion-card class="ion-text-center" (click)="news()">
+          <img width="100" height="100" src="../../../assets/images/Trophy.svg" />
+          <ion-card-header>
+            <ion-card-title class="ion-text-wrap">Achievement</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="ion-text-center" (click)="news()">
+          <img width="100" height="100" src="../../../assets/images/Demise.svg" />
+          <ion-card-header>
+            <ion-card-title class="ion-text-wrap">Demise</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="ion-text-center" (click)="news()">
+          <img width="100" height="100" src="../../../assets/images/Community.svg" />
+          <ion-card-header>
+            <ion-card-title class="ion-text-wrap">Communities</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="ion-text-center" (click)="news()">
+          <img width="100" height="100" src="../../../assets/images/Community Knowledge.svg" />
+          <ion-card-header>
+            <ion-card-title class="ion-text-wrap">Know your communities</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <!-- This is just for testing the addition of new data.. To be reformatted -->
   <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
     <ion-fab-button (click)="addNews()"></ion-fab-button>

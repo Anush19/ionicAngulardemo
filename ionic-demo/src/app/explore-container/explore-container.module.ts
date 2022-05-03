@@ -8,8 +8,10 @@ import { ExploreContainerComponent } from './explore-container.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  imports: [ CommonModule, FormsModule, IonicModule, SharedModule],
+  imports: [CommonModule, FormsModule, IonicModule, SharedModule],
   declarations: [ExploreContainerComponent],
   exports: [ExploreContainerComponent]
 })
-export class ExploreContainerComponentModule {}
+export class ExploreContainerComponentModule {
+  constructor() { }
+}

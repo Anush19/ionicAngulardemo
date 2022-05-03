@@ -1,6 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
-import { NewsArticlesPage } from 'src/app/news-articles/news-articles.page';
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
@@ -12,7 +10,7 @@ export class NewsComponent implements OnInit {
   @Input() contentText: string = '';
   @Input() imageLocation: any = '';
   @Input() imageAltText: string = '';
-  
+
   constructor() { }
   ngOnInit() { }
 

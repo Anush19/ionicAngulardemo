@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { AlertController, IonSlides, ModalController } from '@ionic/angular';
-import { NewsArticlesPage } from '../news-articles/news-articles.page';
+import { NewsArticlesPage } from '../news-section/news-articles/news-articles.page';
 import { FirebaseNewsService } from '../services/firebaseinfo.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-explore-container',
@@ -17,7 +18,7 @@ export class ExploreContainerComponent implements OnInit {
     speed: 400,
     autoplay: true,
   };
-  constructor(private service: FirebaseNewsService, private modalContrl: ModalController, private alertCntrl: AlertController) { }
+  constructor(private router: Router, private service: FirebaseNewsService, private modalContrl: ModalController, private alertCntrl: AlertController) { }
   slidearr = [];
   ngOnInit() {
     this.service.getNews().subscribe(res => {
@@ -84,12 +85,26 @@ export class ExploreContainerComponent implements OnInit {
     console.log('Current index is', currentIndex);
     console.log('Current index is', this.slides.isEnd());
   }
+  news() {
+    this.router.navigate(['/news-articles']);
+  }
 
+  demise() {
+    this.router.navigate(['/tabs/tab1/demise']);
+  }
+
+  communities() {
+    this.router.navigate(['/tabs/tab1/communities']);
+  }
+
+  knowYourCommunity() {
+    this.router.navigate(['/tabs/tab1/knowYourCommunity']);
+  }
   /**This block is just to demo check the crud operations .. to be reordered later */
   async detectChangedSelection(news: any) {
 
     console.log('clicked');
-    //this.onSelect.emit(news);
+    //this.router.navigate(['/news-articles']);
     const modal = await this.modalContrl.create({
       component: NewsArticlesPage,
       componentProps: { id: news.id },

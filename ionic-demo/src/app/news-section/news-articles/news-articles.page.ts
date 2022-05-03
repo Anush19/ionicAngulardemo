@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { FirebaseNewsService } from '../services/firebaseinfo.service';
+import { FirebaseNewsService } from '../../services/firebaseinfo.service';
 
 @Component({
   selector: 'app-news-articles',
